@@ -4,6 +4,14 @@ import { Button } from 'react-bootstrap';
 
 function counter_app() {
   const [counter , setCounter] = useState(0);
+  const increase_counter = () => {
+    setCounter(counter+1)
+    console.log(counter)
+  }
+  const decrease_counter = () => {
+    setCounter(counter-1)
+    console.log(counter)
+  }
   return(
     <>
       {/* <Button type='reset' onClick={() => {
@@ -25,9 +33,15 @@ function counter_app() {
       <div style={styles.container}>
         <Button 
         style = {styles.counter}
-        onClick={(counter) => {
-          // setCounter(counter+1)
-        }}>Add</Button>
+        onClick={increase_counter}>+</Button>
+        <Button
+        style={styles.counter}  
+        >{counter}</Button>
+        <Button 
+        style={styles.counter}
+        onClick={decrease_counter}>
+          -
+        </Button>
       </div>
     </>
   )
@@ -36,10 +50,11 @@ function counter_app() {
 const styles: { [key: string]: CSSProperties } = {
   container: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100vh',
+    height: '100',
+    width:'100',
   },
   button: {
     margin: '5px',
@@ -47,6 +62,8 @@ const styles: { [key: string]: CSSProperties } = {
   counter: {
     fontSize: '2rem',
     margin: '10px',
+    height: '100',
+    width: '500',
   },
 };
 export default counter_app

@@ -42,7 +42,11 @@ function counter_app() {
         onClick={decrease_counter}>
           -
         </Button>
+        <Button
+        onClick={() => {setCounter(0)}}>Reset</Button>
       </div>
+      {/* <div> */}
+      {/* </div> */}
     </>
   )
 }

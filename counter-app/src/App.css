@@ -1,0 +1,29 @@
+.HeadingText  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image:linear-gradient(to right, #427ceb, #1dad6f);
+    font-size: 2rem;
+    flex-direction: column;
+  } 
+
+.buttonStyle {
+    display: flex;
+    position: relative;
+    /* background-Color: white; */
+    color: black;
+    /* border: 2px solid #4CAF50; */
+    padding: 10px 24px;
+    cursor: cursor;
+    margin: 10px;
+    font-Size: 16px;
+    border-Radius: 12px;
+    gap: 10px;
+}
+
+.counter-display {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}

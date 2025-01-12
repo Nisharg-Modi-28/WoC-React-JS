@@ -1,6 +1,7 @@
 // import Button from 'react-bootstrap/Button';
-import { useState, CSSProperties } from 'react';
+import { useState} from 'react';
 import { Button } from 'react-bootstrap';
+import './App.css'
 
 function counter_app() {
   const [counter , setCounter] = useState(0);
@@ -12,62 +13,47 @@ function counter_app() {
     setCounter(counter-1)
     console.log(counter)
   }
+  const reset_counter = () => {
+    setCounter(0);
+  }
+  // const HeadingText = {
+  //   display: "flex",
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  //   height: "100vh",
+  //   backgroundImage:"linear-gradient(to right, #427ceb, #1dad6f)",
+  // }
+
+  // const buttonStyle = {
+  //   display:"flex",
+  //   flexdirection:'column',
+
+  // }
   return(
-    <>
-      {/* <Button type='reset' onClick={() => {
-        counter=0;
-        console.log(`value of counter var is ${counter}`);
-      }}>Reset</Button>
-      <Button type='reset' 
-      onClick={() => {
-        counter++;
-        console.log(`value of counter var is ${counter}`);
-      }}>+</Button>
-      <Button type='reset' 
-      onClick={() => {
-        counter--;
-        console.log(`value of counter var is ${counter}`);
-      }}
-      >-</Button>
-      <Button onClick={() => {}}>{counter}</Button> */}
-      <div style={styles.container}>
+    <div className='HeadingText'>
+      <strong>Counter App</strong>
+      <div className='counter-display'>
+          {counter}
+      </div>
+      <div className='buttonStyle'>
         <Button 
-        style = {styles.counter}
-        onClick={increase_counter}>+</Button>
-        <Button
-        style={styles.counter}  
-        >{counter}</Button>
-        <Button 
-        style={styles.counter}
-        onClick={decrease_counter}>
-          -
+        onClick={increase_counter}>
+          Add
         </Button>
         <Button
-        onClick={() => {setCounter(0)}}>Reset</Button>
+        onClick={decrease_counter}>
+          Subtract
+        </Button>
       </div>
-      {/* <div> */}
-      {/* </div> */}
-    </>
+      <div>
+        <Button
+          onClick={reset_counter}>
+            Reset
+          </Button>
+      </div>
+    </div>
   )
 }
 
-const styles: { [key: string]: CSSProperties } = {
-  container: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100',
-    width:'100',
-  },
-  button: {
-    margin: '5px',
-  },
-  counter: {
-    fontSize: '2rem',
-    margin: '10px',
-    height: '100',
-    width: '500',
-  },
-};
+
 export default counter_app

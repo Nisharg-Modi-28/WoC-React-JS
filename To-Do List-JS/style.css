@@ -41,3 +41,45 @@
     margin-right: 10px;
 }
 
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #dddddd;
+    margin-bottom: 25px;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+#task{
+    flex:1;
+    border:none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+#add_task{
+    border:none;
+    outline:none;
+    padding: 16px 50px;
+    background: #0adcc7;
+    color:#fff;
+    font-size: 16;
+    border-radius: 40px;
+    cursor:pointer;
+}
+
+#taskList li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px; 
+        /* top right bottom and left  */
+    user-select: none;
+    cursor:pointer;
+}
+
+/* #taskList li::before{
+    content: "Read this";
+} */

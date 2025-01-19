@@ -60,11 +60,11 @@
     font-weight: 14px;
 }
 
-#add_task{
+#input_box{
     border:none;
     outline:none;
     padding: 16px 50px;
-    background: #0adcc7;
+    background: #ff0021;
     color:#fff;
     font-size: 16;
     border-radius: 40px;
@@ -75,7 +75,7 @@
     list-style: none;
     font-size: 17px;
     padding: 12px 8px 12px 50px; 
-        /* top right bottom and left  */
+        /* top right bottom left  */
     user-select: none;
     cursor:pointer;
 }

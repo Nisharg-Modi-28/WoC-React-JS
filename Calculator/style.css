@@ -20,7 +20,7 @@
     border-radius: 10px;
 }
 
-button{
+.calculator form input{
     border:0;
     outline:0;
     width: 50px;
@@ -42,4 +42,13 @@ form .display{
     justify-content: flex-end;
     margin: 20px 0;
      /* top-bottom and left-right */
+}
+
+form .display input{
+    text-align: right;
+    flex: 1;
+    font-size: 30px;
+    box-shadow: none;
+    margin:5px;
+    padding: 10px;
 }
